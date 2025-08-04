@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Google Disk Helper Bot</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.6;
+      color: #222;
+    }
+    h1, h2 {
+      color: #2c3e50;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <h1>AI Google Disk Helper Bot</h1>
+  <p><strong>AI-bot</strong> — это интеллектуальный Telegram-бот, который подключается к вашему Google Диску, обрабатывает документы (PDF, DOCX, TXT, XLSX, CSV) и отвечает на ваши вопросы с использованием большой языковой модели (LLM).</p>
+
+  <h2>Как это работает</h2>
+  <ul>
+    <li>Вы авторизуетесь через Google (OAuth 2.0)</li>
+    <li>Бот получает доступ к указанным вами файлам или папкам на Google Диске</li>
+    <li>Бот извлекает текст из документов и строит на его основе базу знаний</li>
+    <li>Вы задаёте вопросы в Telegram — бот отвечает, используя ваши документы</li>
+  </ul>
+
+  <h2>Функции</h2>
+  <ul>
+    <li>Ответы на вопросы по содержимому загруженных документов</li>
+    <li>Генерация стратегий, идей, аналитики и рекомендаций</li>
+    <li>Поддержка PDF, DOCX, TXT, CSV, Excel</li>
+    <li>Контекстный диалог и уточнение вопросов</li>
+    <li>Выбор конкретных файлов и папок на Google Диске</li>
+  </ul>
+
+  <h2>OAuth-доступы</h2>
+  <p>При авторизации бот запрашивает следующие области доступа:</p>
+  <ul>
+    <li><code>userinfo.email</code> и <code>userinfo.profile</code> — для идентификации пользователя</li>
+    <li><code>openid</code> — для подтверждения личности</li>
+    <li><code>drive.metadata.readonly</code> — для чтения списка и свойств файлов</li>
+    <li><code>drive.readonly</code> — для чтения содержимого файлов</li>
+    <li><code>drive.file</code> — для доступа только к выбранным вами файлам</li>
+  </ul>
+
+  <h2>Безопасность</h2>
+  <p>Ваши данные не используются в рекламных или аналитических целях. Все данные хранятся в зашифрованном виде, а токены доступа привязаны к вашему Telegram ID. Вы можете в любой момент отозвать доступ в настройках Google:</p>
+  <p><a href="https://myaccount.google.com/permissions" target="_blank">https://myaccount.google.com/permissions</a></p>
+
+  <h2>Политика и условия</h2>
+  <ul>
+    <li><a href="/privacy.html">Политика конфиденциальности</a></li>
+    <li><a href="/terms.html">Условия использования</a></li>
+  </ul>
+
+  <footer>
+    <p>&copy; 2025 AI Helper Team. Все права защищены.</p>
+  </footer>
+</body>
+</html>
