@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — AI Google Disk Helper Bot</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;max-width:960px;margin:40px auto;padding:0 20px;line-height:1.6;color:#222}
+    h1,h2,h3{color:#2c3e50}
+    h3{margin-top:1.4em}
+    ul{padding-left:20px}
+    code{background:#f4f4f4;padding:2px 4px;border-radius:4px}
+    a{color:#1a73e8;text-decoration:none}
+    a:hover{text-decoration:underline}
+    footer{margin-top:40px;font-size:.9em;color:#777}
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy</h1>
+  <p><strong>Last updated:</strong> 5 August 2025</p>
+
+  <!-- ===================================================================== -->
+  <!--                              1. INTRODUCTION                          -->
+  <!-- ===================================================================== -->
+  <h2 id="sec1">1. Introduction</h2>
+  <p>Thank you for choosing <strong>AI Google Disk Helper Bot</strong> (the “<strong>Service</strong>”). We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains what data we collect, how we use it, how we store it, and what rights you have with regard to your data when you interact with the Service through the Telegram platform and grant us access to your Google Drive via OAuth 2.0 authorization.</p>
+  <p>This document aligns with the <em>Google API Services User Data Policy</em> (including the <em>Limited Use</em> requirements), the <em>General Data Protection Regulation (GDPR)</em>, and industry best practices. By using the Service, you agree to the terms described herein.</p>
+
+  <!-- ===================================================================== -->
+  <!--                              2. DEFINITIONS                           -->
+  <!-- ===================================================================== -->
+  <h2 id="sec2">2. Definitions</h2>
+  <ul>
+    <li><strong>“User”</strong> – any individual who interacts with the Service via Telegram and/or authorizes access to their Google Drive.</li>
+    <li><strong>“Google Account Data”</strong> – the email address and profile details provided via <code>userinfo.email</code> and <code>userinfo.profile</code>.</li>
+    <li><strong>“Google Drive Data”</strong> – file metadata and content retrieved from the User’s Google Drive after explicit authorization.</li>
+    <li><strong>“Personal Data”</strong> – any information relating to an identified or identifiable natural person (GDPR Art. 4 §1).</li>
+    <li><strong>“Processing”</strong> – any operation performed on Personal Data (collection, storage, retrieval, use, disclosure, deletion).</li>
+  </ul>
+
+  <!-- ===================================================================== -->
+  <!--                         3. DATA WE COLLECT                            -->
+  <!-- ===================================================================== -->
+  <h2 id="sec3">3. Data We Collect</h2>
+  <h3>3.1 · Google Account Data</h3>
+  <ul>
+    <li>Email address (<code>userinfo.email</code>)</li>
+    <li>Public profile info (display name, avatar) (<code>userinfo.profile</code>)</li>
+  </ul>
+  <h3>3.2 · Google Drive Data</h3>
+  <p>Only files and folders explicitly selected by the User are accessed:</p>
+  <ul>
+    <li>Metadata: ID, name, MIME type, size, modified time</li>
+    <li>Content: extracted text (PDF, DOCX, TXT, CSV, XLSX)</li>
+  </ul>
+  <h3>3.3 · Telegram Data</h3>
+  <ul>
+    <li>Telegram user ID (chat ID)</li>
+    <li>Messages, commands, and files sent via chat</li>
+  </ul>
+  <h3>3.4 · Authentication Tokens</h3>
+  <ul>
+    <li>OAuth 2.0 access and refresh tokens</li>
+    <li>Token expiry timestamp</li>
+  </ul>
+  <h3>3.5 · Logs & Diagnostic Data</h3>
+  <ul>
+    <li>Timestamps, HTTP status codes, error traces</li>
+    <li>Aggregated performance metrics (latency, memory)</li>
+  </ul>
+
+  <!-- ===================================================================== -->
+  <!--                     4. OAUTH SCOPES REQUESTED                         -->
+  <!-- ===================================================================== -->
+  <h2 id="sec4">4. Google OAuth Scopes Requested</h2>
+  <p>The Service requests these scopes:</p>
+  <ul>
+    <li><code>https://www.googleapis.com/auth/userinfo.email</code> – read your email.</li>
+    <li><code>https://www.googleapis.com/auth/userinfo.profile</code> – read basic profile.</li>
+    <li><code>openid</code> – authenticate via OpenID Connect.</li>
+    <li><code>https://www.googleapis.com/auth/drive.metadata.readonly</code> – list file metadata.</li>
+    <li><code>https://www.googleapis.com/auth/drive.readonly</code> – read content of selected files.</li>
+    <li><code>https://www.googleapis.com/auth/drive.file</code> – limit access to items chosen in the picker.</li>
+  </ul>
+  <p>No write, delete, or sharing scopes are requested.</p>
+
+  <!-- ===================================================================== -->
+  <!--                        5. PURPOSE OF PROCESSING                       -->
+  <!-- ===================================================================== -->
+  <h2 id="sec5">5. Purpose of Processing</h2>
+  <ol>
+    <li><strong>Service Delivery</strong> – answer questions and generate insights from your files.</li>
+    <li><strong>Personalization</strong> – greet you by name and retain context.</li>
+    <li><strong>Security</strong> – verify identity and prevent abuse.</li>
+    <li><strong>Improvement</strong> – debug, monitor, and add features.</li>
+  </ol>
+  <p>Your data is never used for ads, profiling, or resale.</p>
+
+  <!-- ===================================================================== -->
+  <!--                 6. LIMITED USE COMPLIANCE                            -->
+  <!-- ===================================================================== -->
+  <h2 id="sec6">6. Limited Use Compliance</h2>
+  <ul>
+    <li>Data is used only for prominent user‑facing features.</li>
+    <li>No data transfer to third parties except to provide features or comply with law.</li>
+    <li>Human access occurs only with consent, for security, or in aggregated form.</li>
+    <li>No advertising or profiling based on user data.</li>
+  </ul>
+
+  <!-- ===================================================================== -->
+  <!--                     7. SHARING AND DISCLOSURE                         -->
+  <!-- ===================================================================== -->
+  <h2 id="sec7">7. Sharing & Disclosure</h2>
+  <h3>7.1 · Google APIs</h3>
+  <p>Communication with Google uses HTTPS; data stays within Google and our servers.</p>
+  <h3>7.2 · Telegram</h3>
+  <p>Messages transit through Telegram under their policy.</p>
+  <h3>7.3 · AI Model Provider</h3>
+  <p>Minimal text fragments are sent to Groq Cloud for inference; no full docs or tokens shared.</p>
+  <h3>7.4 · Legal Requests</h3>
+  <p>Data disclosed only when lawfully required, limited to the minimum necessary.</p>
+  <h3>7.5 · Corporate Events</h3>
+  <p>In case of merger or sale, data may transfer to successor with notice and same protections.</p>
+
+  <!-- ===================================================================== -->
+  <!--                    8. STORAGE AND SECURITY                            -->
+  <!-- ===================================================================== -->
+  <h2 id="sec8">8. Storage & Security</h2>
+  <ul>
+    <li>Tokens encrypted at rest with AES‑256.</li>
+    <li>All traffic secured via TLS 1.2+.</li>
+    <li>Infrastructure protected by MFA and least‑privilege roles.</li>
+    <li>Servers hosted in ISO 27001 EU data centers.</li>
+    <li>Access logs audited regularly.</li>
+  </ul>
+
+  <!-- ===================================================================== -->
+  <!--                 9. RETENTION AND DELETION                             -->
+  <!-- ===================================================================== -->
+  <h2 id="sec9">9. Retention & Deletion</h2>
+  <ul>
+    <li><strong>Embeddings</strong> – deleted immediately upon request or access revocation.</li>
+    <li><strong>Tokens</strong> – erased after revocation or 90 days of inactivity.</li>
+    <li><strong>Logs</strong> – kept 60 days then anonymized.</li>
+  </ul>
+
+  <!-- ===================================================================== -->
+  <!--             10. INTERNATIONAL TRANSFERS                              -->
+  <!-- ===================================================================== -->
+  <h2 id="sec10">10. International Transfers</h2>
+  <p>Primary processing occurs in the EU. Transfers to the US (Groq Cloud) rely on Standard Contractual Clauses.</p>
+
+  <!-- ===================================================================== -->
+  <!--                        11. USER RIGHTS                                -->
+  <!-- ===================================================================== -->
+  <h2 id="sec11">11. Your Rights</h2>
+  <ul>
+    <li>Access, Rectification, Erasure, Restriction, Portability, Objection</li>
+    <li>File a complaint with a data‑protection authority</li>
+  </ul>
+
+  <!-- ===================================================================== -->
+  <!--                        12. CHILDREN                                   -->
+  <!-- ===================================================================== -->
+  <h2 id="sec12">12. Children’s Privacy</h2>
+  <p>The Service is not directed to children under 16. If a child provides data, contact us for deletion.</p>
+
+  <!-- ===================================================================== -->
+  <!--                        13. CHANGES                                    -->
+  <!-- ===================================================================== -->
+  <h2 id="sec13">13. Changes</h2>
+  <p>Material changes will be announced via the bot and repository 30 days in advance.</p>
+
+  <!-- ===================================================================== -->
+  <!--                        14. CONTACT                                    -->
+  <!-- ===================================================================== -->
+  <h2 id="sec14">14. Contact</h2>
+  <p>Email: <a href="mailto:ai.bot.helper.email@gmail.com">ai.bot.helper.email@gmail.com</a></p>
+
+  <footer>
+    <p>&copy; 2025 AI Helper Team. All rights reserved.</p>
+  </footer>
+</body>
+</html>

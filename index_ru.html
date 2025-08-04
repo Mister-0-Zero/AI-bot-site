@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Google Disk Helper Bot</title>
+  <style>
+    body{font-family:Arial,Helvetica,sans-serif;max-width:960px;margin:40px auto;padding:0 20px;line-height:1.6;color:#222}
+    h1,h2{color:#2c3e50}
+    ul{padding-left:20px}
+    a{color:#1a73e8;text-decoration:none}
+    a:hover{text-decoration:underline}
+    footer{margin-top:40px;font-size:.9em;color:#777}
+  </style>
+</head>
+<body>
+  <h1>AI Google Disk Helper Bot</h1>
+  <p><strong>AI‑bot</strong> — интеллектуальный Telegram‑бот, который подключается к вашему Google Диску, извлекает текст из документов (PDF, DOCX, TXT, XLSX, CSV) и отвечает на вопросы с помощью большой языковой модели (LLM).</p>
+
+  <h2>Как это работает</h2>
+  <ul>
+    <li>Вы проходите OAuth‑авторизацию в Google</li>
+    <li>Бот получает доступ только к выбранным файлам/папкам</li>
+    <li>Сервис индексирует тексты и создаёт базу знаний</li>
+    <li>Вы задаёте вопросы в Telegram — бот отвечает, опираясь на ваши документы</li>
+  </ul>
+
+  <h2>Ключевые функции</h2>
+  <ul>
+    <li>Ответы на вопросы по содержимому файлов</li>
+    <li>Генерация стратегий, идей и аналитики</li>
+    <li>Поддержка PDF, DOCX, TXT, CSV, Excel</li>
+    <li>Диалог с учётом контекста</li>
+    <li>Точный выбор файлов и папок Google Drive</li>
+  </ul>
+
+  <h2>Запрашиваемые OAuth‑области</h2>
+  <p>Бот запрашивает только минимальные права:</p>
+  <ul>
+    <li><code>userinfo.email</code> / <code>userinfo.profile</code> — идентификация</li>
+    <li><code>openid</code> — безопасная аутентификация</li>
+    <li><code>drive.metadata.readonly</code> — просмотр метаданных файлов</li>
+    <li><code>drive.readonly</code> — чтение содержимого выбранных файлов</li>
+    <li><code>drive.file</code> — доступ <em>только</em> к элементам, выбранным пользователем</li>
+  </ul>
+
+  <h2>Безопасность</h2>
+  <p>Данные шифруются; токены привязываются к вашему Telegram ID. Никакая информация не используется для рекламы. Вы можете отозвать доступ в любой момент:</p>
+  <p><a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a></p>
+
+  <h2>Правовые документы</h2>
+  <ul>
+    <li>Политика конфиденциальности: <a href="/privacy_ru.html">рус.</a> / <a href="/privacy_en.html">eng</a></li>
+    <li><a href="/terms.html">Условия использования</a></li>
+  </ul>
+
+  <footer>
+    <p>&copy; 2025 AI Helper Team. Все права защищены.</p>
+  </footer>
+</body>
+</html>

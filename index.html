@@ -1,81 +1,61 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI Google Disk Helper Bot</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
-    }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    a {
-      color: #1a73e8;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #777;
-    }
+    body{font-family:Arial,Helvetica,sans-serif;max-width:960px;margin:40px auto;padding:0 20px;line-height:1.6;color:#222}
+    h1,h2{color:#2c3e50}
+    ul{padding-left:20px}
+    a{color:#1a73e8;text-decoration:none}
+    a:hover{text-decoration:underline}
+    footer{margin-top:40px;font-size:.9em;color:#777}
   </style>
 </head>
 <body>
   <h1>AI Google Disk Helper Bot</h1>
-  <p><strong>AI-bot</strong> — это интеллектуальный Telegram-бот, который подключается к вашему Google Диску, обрабатывает документы (PDF, DOCX, TXT, XLSX, CSV) и отвечает на ваши вопросы с использованием большой языковой модели (LLM).</p>
+  <p><strong>AI‑bot</strong> is an intelligent Telegram assistant that connects to your Google Drive, extracts text from documents (PDF, DOCX, TXT, XLSX, CSV) and answers questions using a large language model (LLM).</p>
 
-  <h2>Как это работает</h2>
+  <h2>How It Works</h2>
   <ul>
-    <li>Вы авторизуетесь через Google (OAuth 2.0)</li>
-    <li>Бот получает доступ к указанным вами файлам или папкам на Google Диске</li>
-    <li>Бот извлекает текст из документов и строит на его основе базу знаний</li>
-    <li>Вы задаёте вопросы в Telegram — бот отвечает, используя ваши документы</li>
+    <li>You sign in with Google (OAuth 2.0)</li>
+    <li>The bot gains access <em>only</em> to the files or folders you select</li>
+    <li>The Service indexes text and builds a private knowledge base</li>
+    <li>You ask questions in Telegram — the bot responds based on your documents</li>
   </ul>
 
-  <h2>Функции</h2>
+  <h2>Key Features</h2>
   <ul>
-    <li>Ответы на вопросы по содержимому загруженных документов</li>
-    <li>Генерация стратегий, идей, аналитики и рекомендаций</li>
-    <li>Поддержка PDF, DOCX, TXT, CSV, Excel</li>
-    <li>Контекстный диалог и уточнение вопросов</li>
-    <li>Выбор конкретных файлов и папок на Google Диске</li>
+    <li>Accurate answers grounded in your files</li>
+    <li>Strategy, ideas, analytics, and recommendations</li>
+    <li>Supported formats: PDF, DOCX, TXT, CSV, Excel</li>
+    <li>Context‑aware conversation and follow‑up questions</li>
+    <li>Granular file/folder selection from Google Drive</li>
   </ul>
 
-  <h2>OAuth-доступы</h2>
-  <p>При авторизации бот запрашивает следующие области доступа:</p>
+  <h2>OAuth Scopes Requested</h2>
+  <p>We request the narrowest scopes needed:</p>
   <ul>
-    <li><code>userinfo.email</code> и <code>userinfo.profile</code> — для идентификации пользователя</li>
-    <li><code>openid</code> — для подтверждения личности</li>
-    <li><code>drive.metadata.readonly</code> — для чтения списка и свойств файлов</li>
-    <li><code>drive.readonly</code> — для чтения содержимого файлов</li>
-    <li><code>drive.file</code> — для доступа только к выбранным вами файлам</li>
+    <li><code>userinfo.email</code> / <code>userinfo.profile</code> — identify the user</li>
+    <li><code>openid</code> — secure authentication</li>
+    <li><code>drive.metadata.readonly</code> — view file metadata</li>
+    <li><code>drive.readonly</code> — read the content of selected files</li>
+    <li><code>drive.file</code> — restrict access to items chosen in the picker</li>
   </ul>
 
-  <h2>Безопасность</h2>
-  <p>Ваши данные не используются в рекламных или аналитических целях. Все данные хранятся в зашифрованном виде, а токены доступа привязаны к вашему Telegram ID. Вы можете в любой момент отозвать доступ в настройках Google:</p>
-  <p><a href="https://myaccount.google.com/permissions" target="_blank">https://myaccount.google.com/permissions</a></p>
+  <h2>Security</h2>
+  <p>Your data is never used for advertising or analytics. Content is encrypted; access tokens are tied to your Telegram ID. Revoke access anytime in your Google account settings:</p>
+  <p><a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a></p>
 
-  <h2>Политика и условия</h2>
+  <h2>Legal</h2>
   <ul>
-    <li><a href="/privacy.html">Политика конфиденциальности</a></li>
-    <li><a href="/terms.html">Условия использования</a></li>
+    <li>Privacy Policy: <a href="/privacy_en.html">English</a> / <a href="/privacy_ru.html">Русская версия</a></li>
+    <li><a href="/terms_en.html">Terms of Service</a></li>
   </ul>
 
   <footer>
-    <p>&copy; 2025 AI Helper Team. Все права защищены.</p>
+    <p>&copy; 2025 AI Helper Team. All rights reserved.</p>
   </footer>
 </body>
 </html>
