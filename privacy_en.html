@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy — AI Google Disk Helper Bot</title>
-  <meta name="description" content="How AI Google Disk Helper Bot accesses, uses, stores, and transfers Google user data and Telegram chat data." />
+  <meta name="description" content="How AI Google Disk Helper Bot accesses, uses, stores, and deletes Google user data and Telegram chat data." />
   <link rel="icon" href="/favicon.ico" />
   <link rel="alternate" hreflang="ru" href="/privacy_ru.html" />
   <link rel="alternate" hreflang="en" href="/privacy_en.html" />
@@ -33,161 +33,108 @@
     <h1>Privacy Policy</h1>
     <p class="muted"><strong>Last updated:</strong> 05 September 2025 • Authorized domain: ai-helper-bot.ru</p>
 
-    <h2 id="intro">1. Introduction</h2>
+    <h2>1. Introduction</h2>
     <p>
-      Thank you for using <strong>AI Google Disk Helper Bot</strong> (the “<strong>Service</strong>”).
-      This Policy explains what we collect, how we use it, how long we keep it, how we share it, and what
-      choices and rights you have. It applies when you interact with the bot on Telegram and connect your
-      Google Drive via OAuth 2.0.
+      <strong>AI Google Disk Helper Bot</strong> (the “Service”) connects to your Google Drive (only with your explicit consent) and answers questions from the content
+      you select. This Policy explains what we collect, how we use it, how we delete it, and what choices you have.
     </p>
     <p class="small muted">
-      The Service’s use and transfer of information received from Google APIs will adhere to the
+      The Service’s use and transfer of information received from Google APIs adheres to the
       <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the <em>Limited Use</em> requirements.
     </p>
 
-    <h2 id="controller">2. Controller & Contact</h2>
+    <h2>2. Controller & Contact</h2>
+    <p>Controller: <strong>AI Helper Team</strong> • Email: <a href="mailto:ai.bot.helper.email@gmail.com">ai.bot.helper.email@gmail.com</a></p>
+
+    <h2>3. “Private text index” (what it is)</h2>
     <p>
-      Controller: <strong>AI Helper Team</strong><br/>
-      Contact: <a href="mailto:ai.bot.helper.email@gmail.com">ai.bot.helper.email@gmail.com</a><br/>
-      Platform: Telegram bot “AI_Google_Disk_helper_bot”.
+      When you select files, we extract text and build a <strong>private text index</strong> — a search structure (tokens/vectors/snippets) tied to your Telegram ID.
+      It exists only to retrieve relevant passages for answers. It is not a public database and is not shared with other users.
+      You can delete it any time with <code>/clear_knowledge</code> or by emailing support.
     </p>
 
-    <h2 id="scope">3. Applicability & Roles</h2>
-    <p>
-      We act as controller for the processing described here. Telegram remains an independent platform that processes your messages under its own terms and policy.
-      Google acts as a separate provider of your Google Account and Google Drive.
-    </p>
-
-    <h2 id="data">4. Data We Collect</h2>
+    <h2>4. Data We Collect</h2>
     <h3>4.1 Google Account Data</h3>
-    <ul>
-      <li>Email and basic profile (<code>userinfo.email</code>, <code>userinfo.profile</code>), and OpenID identifiers (<code>openid</code>).</li>
-    </ul>
+    <ul><li>Email and basic profile (<code>userinfo.email</code>, <code>userinfo.profile</code>), OpenID identifiers (<code>openid</code>).</li></ul>
     <h3>4.2 Google Drive Data</h3>
-    <p>We access <em>only</em> files/folders you explicitly select:</p>
     <ul>
-      <li>Metadata: file ID, name, MIME type, size, modified time.</li>
-      <li>Content: extracted text from supported formats (PDF, DOCX, TXT, CSV, XLSX).</li>
+      <li>Metadata: file ID, name, MIME type, size, modified time (for items you select).</li>
+      <li>Content: extracted text from supported formats (PDF, DOCX, TXT, CSV, XLSX) for the items you select.</li>
     </ul>
     <h3>4.3 Telegram Data</h3>
+    <ul><li>Telegram user ID (chat ID), your messages/commands, and files you send to the bot.</li></ul>
+    <h3>4.4 Tokens & Logs</h3>
     <ul>
-      <li>Telegram user ID (chat ID), messages/commands you send to the bot, and files you upload in chat.</li>
+      <li>OAuth access/refresh tokens and expiry (to keep your connection working).</li>
+      <li>Basic operational logs (timestamps/status/errors) for debugging and reliability.</li>
     </ul>
-    <h3>4.4 Authentication Tokens</h3>
-    <ul>
-      <li>OAuth 2.0 access/refresh tokens and expiry to maintain your connection.</li>
-    </ul>
-    <h3>4.5 Logs & Diagnostics</h3>
-    <ul>
-      <li>Timestamps, request/response status, error traces, and aggregated performance metrics.</li>
-    </ul>
-    <h3>4.6 Data We Ask You <em>Not</em> to Provide</h3>
-    <p>
-      Please do not upload or connect files containing special categories of data (e.g., health, biometric,
-      precise geolocation, government IDs, financial account/PCI data, or other regulated/sensitive content).
-      If you do, you are responsible for ensuring a lawful basis and all required notices/consents.
-    </p>
+    <h3>4.5 Please do not provide sensitive data</h3>
+    <p>Do not connect or send special-category/regulated data (health, biometric, government IDs, financial/PCI, precise geolocation, etc.).</p>
 
-    <h2 id="scopes">5. Google OAuth Scopes Requested</h2>
-    <p>We request the narrowest scopes needed to provide the Service:</p>
-    <ul>
-      <li><code>openid</code>, <code>https://www.googleapis.com/auth/userinfo.email</code>, <code>https://www.googleapis.com/auth/userinfo.profile</code> — identify you during OAuth.</li>
-      <li><code>https://www.googleapis.com/auth/drive.metadata.readonly</code> — list metadata of files you selected and keep the index in sync.</li>
-      <li><code>https://www.googleapis.com/auth/drive.readonly</code> — read the content of the files you selected to answer your questions.</li>
-    </ul>
-    <p class="small muted">
-      We do <strong>not</strong> request broad write or delete scopes. If the technical implementation changes,
-      this page and the OAuth consent screen will be updated accordingly before any new scopes are requested.
-    </p>
-
-    <h2 id="lawful">6. Legal Bases (GDPR)</h2>
-    <ul>
-      <li><strong>Consent</strong> (Art. 6(1)(a)) — you grant Google OAuth consent to connect your Drive.</li>
-      <li><strong>Contract</strong> (Art. 6(1)(b)) — provide the core features you ask for (Q&A over your selected files).</li>
-      <li><strong>Legitimate interests</strong> (Art. 6(1)(f)) — security, abuse prevention, debugging, and service improvement with minimal impact on your privacy.</li>
-    </ul>
-
-    <h2 id="purposes">7. Purposes of Processing</h2>
+    <h2>5. User Consent (how it is given)</h2>
     <ol>
-      <li><strong>Service delivery</strong> — extract text from selected files and generate answers in chat.</li>
-      <li><strong>Personalization</strong> — remember necessary context to answer follow-ups.</li>
-      <li><strong>Security</strong> — verify identity, rate-limit abuse, and ensure operational integrity.</li>
-      <li><strong>Diagnostics</strong> — monitor performance and fix errors.</li>
+      <li>You tap “Connect Google Drive” in Telegram.</li>
+      <li>Google shows its official OAuth consent screen (in English) with the requested scopes.</li>
+      <li><strong>Your consent is given when you approve on Google’s screen.</strong> You may deny or revoke at any time.</li>
     </ol>
-    <p>We do not sell data, build advertising profiles, or use your data for ad targeting.</p>
 
-    <h2 id="limited-use">8. Limited Use Compliance</h2>
+    <h2>6. Google OAuth Scopes & Purpose</h2>
+    <ul>
+      <li><code>openid</code>, <code>userinfo.email</code>, <code>userinfo.profile</code> — identify you during OAuth and link the integration to your Telegram account.</li>
+      <li><code>drive.metadata.readonly</code> — list metadata so you can browse and select items.</li>
+      <li><code>drive.readonly</code> — read the content of only the items you selected to answer your questions.</li>
+    </ul>
+
+    <h2>7. Legal Bases (GDPR)</h2>
+    <ul>
+      <li><strong>Consent</strong> — you approve access on the Google OAuth screen.</li>
+      <li><strong>Contract</strong> — to provide the features you request.</li>
+      <li><strong>Legitimate interests</strong> — security, abuse prevention, diagnostics.</li>
+    </ul>
+
+    <h2>8. Use & Limited Use</h2>
     <div class="card">
       <ul>
-        <li>Data is used only to provide or improve user-facing features described here.</li>
-        <li>No human access to your content unless you explicitly request support by email, for security/abuse investigation, or where required by law.</li>
-        <li>No transfer to third parties except to provide the user-facing features, for security/legal reasons, or as part of a lawful corporate transaction with notice and equivalent protections.</li>
-        <li>No use of Google user data for advertising, creditworthiness, or profiling unrelated to the Service.</li>
+        <li>Data is used only to provide/improve user-facing features described here.</li>
+        <li>No human access unless you explicitly ask for support, for security/legal reasons.</li>
+        <li>No selling/sharing with advertisers or data brokers; no ad targeting or creditworthiness uses.</li>
       </ul>
     </div>
 
-    <h2 id="sharing">9. Sharing & Sub-processors</h2>
-    <h3>9.1 Google</h3>
-    <p>Secure API calls over HTTPS; your Google Account and Drive remain with Google.</p>
-    <h3>9.2 Telegram</h3>
-    <p>Messages transit through Telegram under their terms and policy; we do not control Telegram’s processing.</p>
-    <h3>9.3 AI Inference Provider</h3>
-    <p>
-      Minimal text snippets necessary to answer your question may be sent to our AI inference provider (e.g., Groq Cloud)
-      over TLS. We instruct providers not to use such snippets to train their own models. Do not send confidential or
-      regulated data to the bot.
-    </p>
-    <h3>9.4 Hosting & Operations</h3>
-    <p>Our servers and backups are hosted in reputable data centers (ISO 27001 or equivalent). Access is restricted by least-privilege roles and MFA.</p>
-    <h3>9.5 Legal Requests</h3>
-    <p>We disclose data only if required by applicable law, limiting the scope to the minimum necessary.</p>
-
-    <h2 id="security">10. Storage & Security</h2>
+    <h2>9. Sharing & Providers</h2>
     <ul>
-      <li>Access/refresh tokens stored encrypted at rest; communications protected with TLS 1.2+.</li>
-      <li>Operational access is limited to authorized personnel under confidentiality commitments.</li>
-      <li>Regular audits of access logs and key rotations as part of standard ops hygiene.</li>
+      <li><strong>Google</strong> — secure API calls over HTTPS; your account and Drive stay with Google.</li>
+      <li><strong>Telegram</strong> — messages transit under Telegram’s policies.</li>
+      <li><strong>AI inference</strong> — minimal text snippets may be sent to our provider (e.g., Groq) over HTTPS; we instruct providers not to train on your snippets.</li>
+      <li><strong>Hosting</strong> — reputable data centers; access limited by least-privilege and MFA where applicable.</li>
     </ul>
 
-    <h2 id="retention">11. Retention & Deletion</h2>
+    <h2>10. Security</h2>
     <ul>
-      <li><strong>Derived text index/metadata</strong>: kept while your integration is active; deleted upon your request or after access revocation.</li>
-      <li><strong>OAuth tokens</strong>: erased after you revoke access or after 90 days of inactivity.</li>
-      <li><strong>Logs</strong>: retained up to 60 days, then anonymized or deleted.</li>
-    </ul>
-    <p>
-      You can request deletion via email at <a href="mailto:ai.bot.helper.email@gmail.com">ai.bot.helper.email@gmail.com</a>.
-      You can revoke Google access at any time at
-      <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">myaccount.google.com/permissions</a>.
-    </p>
-
-    <h2 id="transfers">12. International Transfers</h2>
-    <p>
-      Primary processing occurs in the EU/EEA where possible. If transfers outside your region occur (e.g., to the US for AI inference),
-      we rely on appropriate safeguards such as Standard Contractual Clauses and technical measures.
-    </p>
-
-    <h2 id="rights">13. Your Rights</h2>
-    <ul>
-      <li>Access, rectification, erasure, restriction, portability, and objection (GDPR Articles 15–21).</li>
-      <li>Withdraw consent at any time (e.g., by revoking Google access); this does not affect prior processing.</li>
-      <li>Lodge a complaint with a competent data protection authority.</li>
+      <li>Transport encryption via HTTPS; tokens stored encrypted at rest.</li>
+      <li>Operational access restricted; activity logs monitored.</li>
     </ul>
 
-    <h2 id="notices">14. In-App Notices & Choices</h2>
+    <h2>11. Retention & Deletion</h2>
     <ul>
-      <li>Before connecting to Google Drive, the bot shows prominent notices and links to this Policy.</li>
-      <li>You can stop using the bot at any time and request deletion of your index and metadata.</li>
-      <li>Please avoid sending sensitive or regulated information to the bot.</li>
+      <li><strong>Private text index & related metadata</strong>: deleted immediately when you run <code>/clear_knowledge</code> or upon your email request.</li>
+      <li><strong>After you revoke Google access</strong>, we immediately stop any further reading of your Drive.</li>
+    </ul>
+    <p>Deletion requests: <a href="mailto:ai.bot.helper.email@gmail.com">ai.bot.helper.email@gmail.com</a>.</p>
+
+    <h2>12. International Transfers</h2>
+    <p>Processing may involve transfers across regions (e.g., AI inference). We use appropriate contractual and technical safeguards.</p>
+
+    <h2>13. Your Rights</h2>
+    <ul>
+      <li>Access, rectification, erasure, restriction, portability, objection; withdraw consent by revoking access.</li>
+      <li>Complain to a data protection authority where applicable.</li>
     </ul>
 
-    <h2 id="children">15. Children</h2>
-    <p>The Service is not directed to children under 16. If you believe a child has provided data, contact us to delete it.</p>
+    <h2>14. Changes</h2>
+    <p>We may update this Policy from time to time. If changes are material, we will notify on this page and/or in-bot where appropriate and required by law.</p>
 
-    <h2 id="changes">16. Changes to this Policy</h2>
-    <p>Material changes will be announced in-bot and on this page at least 30 days before they take effect.</p>
-
-    <h2 id="contact">17. Contact</h2>
+    <h2>15. Contact</h2>
     <p>Email: <a href="mailto:ai.bot.helper.email@gmail.com">ai.bot.helper.email@gmail.com</a></p>
 
     <footer class="small">
