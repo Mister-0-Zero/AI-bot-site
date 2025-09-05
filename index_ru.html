@@ -2,86 +2,133 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Google Disk Helper Bot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Google Disk Helper Bot — Главная</title>
+  <meta name="description" content="Телеграм-бот, который по вашему согласию подключается к Google Диску, читает выбранные файлы и отвечает на вопросы по их содержанию." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="alternate" hreflang="en" href="/index.html" />
+  <link rel="alternate" hreflang="ru" href="/index_ru.html" />
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
-    }
-    h1, h2 {
-      color: #2c3e50;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    a {
-      color: #1a73e8;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #777;
-    }
-    .logo {
-      display: block;
-      max-height: 80px;
-      margin: 0 auto 20px;
-    }
+    :root { --ink:#1f2937; --muted:#6b7280; --brand:#1a73e8; --bg:#ffffff; --card:#f8fafc; --line:#e5e7eb; }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    .wrap{max-width:980px;margin:40px auto;padding:0 20px;position:relative}
+    .lang{position:absolute;top:-8px;right:20px;font-size:14px}
+    .lang a{color:var(--brand);text-decoration:none}
+    .lang a:hover{text-decoration:underline}
+    header{display:flex;align-items:center;gap:16px;margin-bottom:8px}
+    header img{width:64px;height:64px;border-radius:12px;object-fit:cover}
+    h1{font-size:28px;margin:0}
+    h2{margin:18px 0 8px}
+    .muted{color:var(--muted)}
+    .card{background:var(--card);padding:18px 16px;border-radius:14px;margin:18px 0;border:1px solid var(--line)}
+    .btns{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;border:1px solid var(--line);color:var(--ink)}
+    .btn:hover{border-color:#cbd5e1}
+    .primary{background:var(--brand);color:#fff;border-color:var(--brand)}
+    ul,ol{padding-left:20px;margin:10px 0}
+    footer{margin:36px 0 28px}
+    code{background:#eef2ff;border:1px solid #c7d2fe;padding:2px 6px;border-radius:6px}
+    .small{font-size:13px}
   </style>
+  <link rel="canonical" href="https://ai-helper-bot.ru/index_ru.html" />
 </head>
 <body>
-  <img src="logo_bot.jpg" alt="AI Bot Logo" class="logo" />
-  <h1>AI Google Disk Helper Bot</h1>
-  <p><strong>AI‑bot</strong> — интеллектуальный Telegram‑бот, который подключается к вашему Google Диску, извлекает текст из документов (PDF, DOCX, TXT, XLSX, CSV) и отвечает на вопросы с помощью большой языковой модели (LLM).</p>
+  <div class="wrap">
+    <div class="lang">Язык: <a href="/index.html" hreflang="en">EN</a> · <strong>RU</strong></div>
 
-  <h2>Как это работает</h2>
-  <ul>
-    <li>Вы проходите OAuth‑авторизацию в Google</li>
-    <li>Бот получает доступ только к выбранным файлам/папкам</li>
-    <li>Сервис индексирует тексты и создаёт базу знаний</li>
-    <li>Вы задаёте вопросы в Telegram — бот отвечает, опираясь на ваши документы</li>
-  </ul>
+    <header>
+      <img src="/logo_bot.jpg" alt="Логотип AI Google Disk Helper Bot" />
+      <div>
+        <h1>AI Google Disk Helper Bot</h1>
+        <div class="muted">Главная • Авторизованный домен: ai-helper-bot.ru</div>
+      </div>
+    </header>
 
-  <h2>Ключевые функции</h2>
-  <ul>
-    <li>Ответы на вопросы по содержимому файлов</li>
-    <li>Генерация стратегий, идей и аналитики</li>
-    <li>Поддержка PDF, DOCX, TXT, CSV, Excel</li>
-    <li>Диалог с учётом контекста</li>
-    <li>Точный выбор файлов и папок Google Drive</li>
-  </ul>
+    <p>
+      <strong>AI-bot</strong> — это телеграм-ассистент, который подключается к вашему Google Диску
+      <strong>только с вашего явного согласия</strong> и отвечает на вопросы по содержимому выбранных вами файлов
+      (TXT, PDF, DOCX, CSV, XLSX). Бот извлекает текст и формирует ответы прямо в чате.
+    </p>
 
-  <h2>Запрашиваемые OAuth‑области</h2>
-  <p>Бот запрашивает только минимальные права:</p>
-  <ul>
-    <li><code>userinfo.email</code> / <code>userinfo.profile</code> — идентификация</li>
-    <li><code>openid</code> — безопасная аутентификация</li>
-    <li><code>drive.metadata.readonly</code> — просмотр метаданных файлов</li>
-    <li><code>drive.readonly</code> — чтение содержимого выбранных файлов</li>
-    <li><code>drive.file</code> — доступ <em>только</em> к элементам, выбранным пользователем</li>
-  </ul>
+    <div class="btns">
+      <a class="btn primary" href="https://t.me/AI_Google_Disk_helper_bot" rel="noopener">Открыть в Telegram</a>
+      <a class="btn" href="/privacy_ru.html">Политика конфиденциальности</a>
+      <a class="btn" href="/terms_ru.html">Условия использования</a>
+    </div>
 
-  <h2>Безопасность</h2>
-  <p>Данные шифруются; токены привязываются к вашему Telegram ID. Никакая информация не используется для рекламы. Вы можете отозвать доступ в любой момент:</p>
-  <p><a href="https://myaccount.google.com/permissions" target="_blank">myaccount.google.com/permissions</a></p>
+    <section class="card">
+      <h2>Как это работает</h2>
+      <ol>
+        <li>Запускаете бота в Telegram и нажимаете «Подключить Google Диск».</li>
+        <li>Google показывает официальный экран согласия OAuth (на английском). Вы подтверждаете или отклоняете доступ.</li>
+        <li>Бот читает <em>только</em> те файлы/папки, которые вы выбрали, и строит приватный текстовый индекс.</li>
+        <li>Задаёте вопросы в чате — ответы формируются на основе ваших документов.</li>
+      </ol>
+      <p class="small muted">Вы можете отозвать доступ в любой момент:
+        <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Аккаунт Google → Безопасность → Доступ сторонних приложений</a>.
+      </p>
+    </section>
 
-  <h2>Правовые документы</h2>
-  <ul>
-    <li>Политика конфиденциальности: <a href="/privacy_ru.html">рус.</a> / <a href="/privacy_en.html">eng</a></li>
-    <li><a href="/terms.html">Условия использования</a></li>
-  </ul>
+    <section class="card">
+      <h2>Ключевые возможности</h2>
+      <ul>
+        <li>Точный выбор файлов/папок Google Диска.</li>
+        <li>Ответы, основанные на ваших документах.</li>
+        <li>Диалоговый режим с уточнениями.</li>
+        <li>Форматы: PDF, DOCX, TXT, CSV, Excel.</li>
+      </ul>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 AI Helper Team. Все права защищены.</p>
-  </footer>
+    <section class="card">
+      <h2>Используемые области (scopes) и обоснование</h2>
+      <ul>
+        <li><code>openid</code>, <code>userinfo.email</code>, <code>userinfo.profile</code> — идентификация пользователя при OAuth.</li>
+        <li><code>https://www.googleapis.com/auth/drive.metadata.readonly</code> — просмотр метаданных выбранных файлов и синхронизация индекса.</li>
+        <li><code>https://www.googleapis.com/auth/drive.readonly</code> — чтение содержимого выбранных файлов для формирования ответов.</li>
+      </ul>
+      <p class="small muted">Запрашиваем только минимально необходимые области. Широких прав на запись не требуется.</p>
+    </section>
+
+    <section class="card">
+      <h2>Использование данных Google-пользователей</h2>
+      <ul>
+        <li>Данные применяются исключительно для функций выше (Q&A по выбранным файлам).</li>
+        <li>Продажа или передача рекламным платформам/брокерам данных исключена.</li>
+        <li>Чтение человеком не выполняется, кроме случаев вашей явной просьбы в поддержку по email.</li>
+      </ul>
+      <p class="small muted"><strong>Limited Use:</strong> Использование и передача информации, полученной через Google APIs,
+        соответствует <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, включая требования Limited Use.</p>
+    </section>
+
+    <section class="card">
+      <h2>Хранение и удаление</h2>
+      <ul>
+        <li>Храним минимум метаданных и производный текстовый индекс из выбранных вами файлов.</li>
+        <li>Вы можете запросить удаление индекса и метаданных в любое время: <a href="mailto:ai.bot.helper.email@gmail.com">ai.bot.helper.email@gmail.com</a>.</li>
+        <li>После отзыва доступа чтение Диска прекращается немедленно.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Дисклеймер (кратко)</h2>
+      <p class="small muted">
+        Бот предоставляется «как есть» исключительно в информационных целях. Он не предназначен для
+        медицинских, юридических, финансовых советов и для критически важных/опасных сценариев.
+        Используя бота, вы соглашаетесь с <a href="/terms_ru.html">Условиями использования</a>.
+      </p>
+    </section>
+
+    <footer class="small">
+      <div>
+        Быстрые ссылки:
+        <a href="/privacy_ru.html">Политика (RU)</a> ·
+        <a href="/privacy_en.html">Политика (EN)</a> ·
+        <a href="/terms_ru.html">Условия (RU)</a> ·
+        <a href="/terms_en.html">Условия (EN)</a>
+      </div>
+      <div>Поддержка: <a href="mailto:ai.bot.helper.email@gmail.com">ai.bot.helper.email@gmail.com</a></div>
+      <div class="muted">© 2025 AI Helper Team. Обновлено: 2025-09-05.</div>
+    </footer>
+  </div>
 </body>
 </html>
